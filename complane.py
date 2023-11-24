@@ -36,24 +36,15 @@ for l in sys.stdin:
 
 if d_y == {} and d_u == {} and d_v == {}:
     print("Every planes are OK!!!")
-
-if d_y != {}:
+elif d_y != {}:
     print("==============FUCKING_Y==============")
     [print("Frame:", fnm, "PSNR_Y:", list(d_y.keys())[list(d_y.values()).index(fnm)]) for fnm in sorted(d_y.values())]
     print("===================================")
-else:
-    print("Y plane is OK!")
-
-if d_u != {}:
+elif d_u != {}:
     print("==============FUCKING_U==============")
     [print("Frame:", fnm, "PSNR_U:", list(d_u.keys())[list(d_u.values()).index(fnm)]) for fnm in sorted(d_u.values())]
     print("===================================")
-else:
-    print("U plane is OK!")
-
-if d_v != {}:
+elif d_v != {}:
     print("==============FUCKING_V==============")
     [print("Frame:", fnm, "PSNR_V:", list(d_v.keys())[list(d_v.values()).index(fnm)]) for fnm in sorted(d_v.values())]
     print("===================================")
-else:
-    print("V plane is OK!")
